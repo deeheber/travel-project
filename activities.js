@@ -19,6 +19,9 @@ function updateResults(){
 
   var isIndoor = (document.getElementById("options").isIndoor.value == "true");
   var intensity = document.getElementById("options").intensity.value;
+  var cost = document.getElementById("options").cost.value;
+  var kidFriendly = (document.getElementById("options").kidFriendly.value == "true");
+
 
   if(document.getElementById("options").isIndoor.value !== ""){
     choices.isIndoor = isIndoor;
@@ -26,6 +29,14 @@ function updateResults(){
 
   if(intensity !== ""){
     choices.intensity = intensity;
+  }
+
+  if(cost !== ""){
+    choices.cost = cost;
+  }
+
+  if(document.getElementById("options").kidFriendly.value !== ""){
+    choices.kidFriendly = kidFriendly;
   }
 
   /***Console logging out the current choices***/
@@ -45,30 +56,5 @@ function updateResults(){
       restultsDiv.innerHTML += "<p>"+allActivities[index].name+"</p>";
     }
   }
-
-
-  // var changedBox = document.getElementById(checkedBox);
-  // /**alert(checkedBox + " is " + changedBox.checked);**/
-
-  // /**Indoor and Outdoor options**/
-  // var outdoor = document.getElementById("outdoor");
-  // var indoor = document.getElementById("indoor");
-
-  // if(outdoor.checked){
-  //   restultsDiv.innerHTML = " ";
-  //   for(var index=0; index<allActivities.length; index++){
-  //     if(allActivities[index].isIndoor == false){
-  //       restultsDiv.innerHTML += "<p>"+allActivities[index].name+"</p>";
-  //     }
-  //   }
-  // }
-  // else {
-  //   restultsDiv.innerHTML = " ";
-  //   for(var index=0; index<allActivities.length; index++){
-  //     if(allActivities[index].isIndoor == true){
-  //       restultsDiv.innerHTML += "<p>"+allActivities[index].name+"</p>";
-  //     }
-  //   }
-  // }
-
 }
+
