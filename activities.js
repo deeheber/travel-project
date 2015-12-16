@@ -56,5 +56,14 @@ function updateResults(){
       restultsDiv.innerHTML += "<p>"+allActivities[index].name+"</p>";
     }
   }
+  resultsCheck();
+}
+
+/***When no results are found for that search - throw an error message***/
+function resultsCheck(){
+  if(restultsDiv.innerHTML == " "){
+    restultsDiv.innerHTML += "<p>No results found!</p>";
+    restultsDiv.innerHTML += "<p>Please select another combination.</p>";
+  }
 }
 
