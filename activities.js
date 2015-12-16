@@ -3,7 +3,7 @@ var allActivities = App.allActivities();
 restultsDiv.innerHTML = " ";
 
 
-/** Adding Event Listeners to each checkbox **/
+/** Adding Event Listeners to each radio button **/
 var checkboxes = document.getElementsByTagName("input");
 
 for(var index = 0; index < checkboxes.length; index++) {
